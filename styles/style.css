@@ -3,6 +3,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
+  background-color: var(--main-bg-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,12 +100,12 @@
 
 .header__theme-menu-button:focus { 
   outline: none;
-  border-bottom: 1px solid var(--border-color-active-button);
+  border-bottom: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active { 
   pointer-events: none;
-  border: 1px solid var(--border-color-active-button);
+  border: 1px solid currentColor;
 }
 
 .title-decor {
@@ -245,6 +246,10 @@
   .title { 
     margin-left: calc(-1 * var(--padding-inline-page));
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .title__footer { 
+    margin-left: 0;
   }
 
   .title-decor { 

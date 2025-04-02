@@ -6,7 +6,6 @@
   --bg-color-accent-text: var(--light-red_dark-theme, #FF0070);
   --heading-text-color: var(--fuchsia_dark-theme, #DB00FF);
   --main-bg-color: var(--black_dark-theme, #000028);
-  --border-color-active-button: var(--light-red_dark-theme, #FF0070);
   --border-color-pseudo: var(--light-red_dark-theme, #FF0070);
   --border-color-hover-button: var(--light-red_dark-theme-opacity, #FF007066);
 }
@@ -14,6 +13,10 @@
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
   background-image: url(../images/cover-image-dark.png);
+}
+
+.theme-dark .decoration-cam { 
+  display: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,12 +27,15 @@
     --bg-color-accent-text: var(--light-red_dark-theme, #FF0070);
     --heading-text-color: var(--fuchsia_dark-theme, #DB00FF);
     --main-bg-color: var(--black_dark-theme, #000028);
-    --border-color-active-button: var(--light-red_dark-theme, #FF0070);
     --border-color-pseudo: var(--light-red_dark-theme, #FF0070);
     --border-color-hover-button: var(--light-red_dark-theme-opacity, #FF007066);
   }
 
   .page { 
     background-image: url(../images/cover-image-dark.png);
+  }
+
+  .decoration-cam { 
+    display: block;
   }
 }
