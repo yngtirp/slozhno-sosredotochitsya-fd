@@ -3,7 +3,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,7 +11,7 @@
 
 .header {
   display: grid;
-  grid-template-rows: auto min-content auto;
+  grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   position: relative;
   height: max(668px, 100vh);
@@ -70,7 +69,6 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
-  letter-spacing: 0%;
   color: var(--heading-text-color);
   text-shadow: 4px 4px 0 var(--bg-color-accent-text);
 }
@@ -217,15 +215,15 @@
 }
 
 .footer { 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   position: relative;
   height: max(668px, 100vh);
   padding-inline: var(--padding-inline-page);
 }
 
 .title__footer { 
+  grid-row: 2;
   text-shadow: 2px 2px 0 #FF0070;
 }
 
