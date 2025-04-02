@@ -118,9 +118,8 @@
   color: var(--accent-text-color);
   background-color: var(--bg-color-accent-text);
   font-weight: 700;
-  min-width: 355px;
-  max-width: 491px;
-
+  max-width: 355px;
+  margin-bottom: 11px;
 } 
 
 .content { 
@@ -253,6 +252,7 @@
   .title-decor { 
     justify-self: end;
     max-width: 364px;
+    margin-bottom: 21px;
   }
 
   .content-section {
@@ -286,6 +286,7 @@
 @media (width >= 1024px) { 
   .title-decor { 
     max-width: 491px;
+    margin-bottom: 20px;
   }
 
   .header__theme-menu-list { 
