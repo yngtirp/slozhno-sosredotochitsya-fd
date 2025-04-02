@@ -83,12 +83,6 @@
   margin-top: 10px
 }
 
-@media (768px <= width < 1024px) {
-  .header__theme-menu-list {
-    margin-top: 19px;
-  }
-}
-
 .header__theme-menu-button {
   width: 70px;
   height: 26px;
@@ -244,6 +238,10 @@
     --padding-inline-page: 20px;
   }
 
+  .header__theme-menu-list {
+    margin-top: 19px;
+  }
+
   .title { 
     margin-left: calc(-1 * var(--padding-inline-page));
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -291,6 +289,7 @@
 
   .header__theme-menu-list { 
     flex-direction: row;
+    margin-top: 0;
   }
 
   .header__theme-menu { 
