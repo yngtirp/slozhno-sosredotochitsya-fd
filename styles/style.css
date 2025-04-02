@@ -1,5 +1,306 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: auto min-content auto;
+  align-items: center;
+  position: relative;
+  height: max(668px, 100vh);
+  padding-inline: var(--padding-inline-page);
+}
+
+.decorated-zone::before { 
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: var(--border-color-pseudo);
+  position: absolute;
+  top: var(--padding-inline-page);
+  right: var(--padding-inline-page);
+}
+
+.decorated-zone::after { 
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: var(--border-color-pseudo);
+  position: absolute;
+  bottom: var(--padding-inline-page);
+  left: var(--padding-inline-page);
+}
+
+.decoration-cam {
+  text-transform: uppercase;
+  display: block;
+  width: 33px;
+  height: 26px;
+  color: var(--sub-accent-text-color);
+  position: absolute;
+  top: var(--padding-inline-page);
+  right: calc(28px + var(--padding-inline-page));
+}
+
+.decoration-cam::after { 
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #FF0070;
+  border-radius: 50%;
+  margin-inline-start: 10px;
+  position: absolute;
+  top: 8px;
+  box-shadow: 0px 0px 4px 2px #FF0070;
+}
+
+.title { 
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 83%;
+  letter-spacing: 0%;
+  color: var(--heading-text-color);
+  text-shadow: 4px 4px 0 var(--bg-color-accent-text);
+}
+
+.header__theme-menu-list { 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  background: none;
+  border: none;
+  text-transform: lowercase;
+  line-height: 18px;
+  text-align: center;
+  color: var(--sub-accent-text-color);
+}
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+  border: 1px solid var(--border-color-hover-button);
+}
+
+.header__theme-menu-button:focus { 
+  outline: none;
+  border-bottom: 1px solid var(--border-color-active-button);
+}
+
+.header__theme-menu-button_active { 
+  border: 1px solid var(--border-color-active-button);
+}
+
+.title-decor {
+  display: block;
+  color: var(--accent-text-color);
+  background-color: var(--bg-color-accent-text);
+  font-weight: 700;
+  min-width: 355px;
+  max-width: 491px;
+
+} 
+
+.content { 
+  display: grid;
+  gap: var(--sections-gap);
+  margin-block: var(--margin-block-main-section);
+  padding-inline: var(--padding-inline-page);
+}
+
+.content-section { 
+  display: grid;
+  gap: var(--content-section-gap);
+}
+
+.text-blocks { 
+  display: grid;
+  gap: var(--content-section-gap);
+  align-items: start;
+}
+
+.text-block { 
+  display: grid;
+  gap: var(--text-block-gap);
+}
+
+.section-advices-gap {
+  gap: 20px;
+}
+
+.content-section__title { 
+  font-weight: 700;
+  color: var(--sub-accent-text-color);
+  font-size: 18px;
+}
+
+.text-blocks__list { 
+  display: grid;
+  gap: var(--content-section-gap);
+}
+
+.text-blocks__list-item { 
+  display: grid;
+  gap: 10px;
+}
+
+.text-block__title {
+  color: var(--accent-text-color);
+  font-weight: 700;
+  background-color: var(--bg-color-accent-text);
+  font-size: 18px;
+}
+
+.text-block__content { 
+  color: var(--main-text-color);
+}
+
+.text-blocks__subtitle { 
+  color: var(--accent-text-color);
+  font-weight: 400;
+  font-size: 18px;
+  background-color: var(--bg-color-accent-text);
+}
+
+.text-block__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--bg-color-accent-text);
+  position: relative;
+  border: 1px solid transparent; /* для того, чтобы в состоянии :focus текст не прыгал */
+}
+
+.text-block__link:focus {
+  outline: none;
+  border: 1px solid var(--main-text-color);
+}
+
+.text-block__link:hover::after { 
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: var(--main-text-color);
+  height: 1.5px;
+  bottom: 1px;
+  left: 0;
+}
+
+.pictures { 
+  display: grid;
+  gap: var(--pictures-list-gap);
+}
+
+.pictures-list { 
+  display: grid;
+  gap: var(--pictures-list-gap);
+}
+
+.picture { 
+  display: block;
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: max(668px, 100vh);
+  padding-inline: var(--padding-inline-page);
+}
+
+.title__footer { 
+  text-shadow: 2px 2px 0 #FF0070;
+}
+
+@media (width >= 768px) { 
+  :root {
+    --sections-gap: 80px;
+    --margin-block-main-section: 60px;
+    --pictures-list-gap: 20px;
+    --padding-inline-page: 20px;
+  }
+
+  .title { 
+    margin-left: calc(-1 * var(--padding-inline-page));
+  }
+
+  .title-decor { 
+    justify-self: end;
+    max-width: 364px;
+  }
+
+  .content-section {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .causes { 
+    .content-section__title { 
+      max-width: 236px;
+    }
+
+    .text-blocks { 
+      grid-column: 1/-1;
+    }
+  }
+
+  .pictures-list { 
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pictures-list__item:nth-child(1), .pictures-list__item:nth-child(5){ 
+    grid-column-start: span 2;
+  }
+
+  .pictures-list__item:nth-child(2), .pictures-list__item:nth-child(3){ 
+    grid-row-start: span 2;
+  }
+}
+
+@media (width >= 1024px) { 
+  .title-decor { 
+    max-width: 491px;
+  }
+
+  .header__theme-menu-list { 
+    flex-direction: row;
+  }
+
+  .header__theme-menu { 
+    margin-top: 20px;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .content-section { 
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .text-blocks { 
+    grid-column: span 2;
+  }
+
+  .causes { 
+    .text-blocks { 
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }

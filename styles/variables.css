@@ -2,3 +2,25 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+
+:root {
+  --pink_dark-theme: #F1B2CE;
+  --black_dark-theme: #000028;
+  --light-red_dark-theme: #FF0070;
+  --light-red_dark-theme-opacity: #FF007066;
+  --fuchsia_dark-theme: #DB00FF;
+  --light-pink_light-theme: #FFF1F7;
+  --pink_light-theme: #FFC2E6;
+  --dark-pink_light-theme: #FF8DCB;
+  --black_light-theme: #353430;
+  --black_light-theme-opacity: #32312D66;
+  --main-gap: 10px;
+  --sections-gap: 50px;
+  --margin-block-main-section: 40px;
+  --padding-inline-page: 10px;
+  --text-block-gap: 10px;
+  --content-section-gap: 20px; 
+  --pictures-list-gap: 10px;
+}
+
